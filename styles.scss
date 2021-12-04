@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$darker-cyan: hsl(179, 100%, 13%);
+$white-paragraph: hsla(0, 0%, 100%, 0.75);
+$light-gray: hsl(0, 0%, 95%);
+$shoulders-font: 'Big Shoulders Display', cursive;
+$lexand-deca: 'Lexend Deca', sans-serif;
+$font-size: 15px;
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+  
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+body {
+  font-size: $font-size;
+  font-family: $lexand-deca;
+  color: $white-paragraph;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  @media screen and (max-width:800px) {
+    position: relative;
+  }
+}
+
+.card-container {
+  display: flex;
+  width: 60vw;
+
+  @media screen and (max-width:800px) {
+    flex-direction: column;
+    padding: 30px 0px 30px 0;
+  }
+}
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  height: auto;
+
+  .card-title {
+    font-family: $shoulders-font;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $light-gray;
+    margin-bottom: 30px;
+  }
+
+  .card-desc {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 80px;
+
+    @media screen and (max-width:800px) {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .car-icon {
+    height: auto;
+    width: 48px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width:800px) {
+    padding: 40px;
+  }
+}
+
+.sedans-card {
+  background-color: $bright-orange;
+  border-radius: 5px 0 0 5px;
+
+  @media screen and (max-width:800px) {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.suvs-card {
+  background-color: $dark-cyan;
+}
+
+.luxury-card {
+  background-color: $darker-cyan;
+  border-radius: 0 5px 5px 0;
+
+  @media screen and (max-width:800px) {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.learn-more-btn {
+  border: 2px solid $light-gray;
+  background-color: $light-gray;
+  color: #000;
+  mix-blend-mode: screen;
+  width: 10vw;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $light-gray;
+    color: $white-paragraph;
+    background-color: transparent; 
+  }
+
+  @media screen and (max-width:800px) {
+    width: 30vw;
+  }
+}
+
+footer {
+  .attribution {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+    color: black;
+  
+    a {
+      color: $bright-orange;
+    }
+  }
+}
