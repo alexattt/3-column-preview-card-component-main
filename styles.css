@@ -71,6 +71,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 60vw;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 800px) {
@@ -180,24 +181,14 @@ body {
   }
 }
 
-footer .attribution {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.attribution {
   text-align: center;
-  font-size: 14px;
-  padding: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
   color: black;
 }
 
-footer .attribution a {
+.attribution a {
   color: #e38826;
-}
-
-@media screen and (min-width: 800px) {
-  footer .attribution {
-    bottom: 3%;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
